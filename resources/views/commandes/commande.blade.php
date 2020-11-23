@@ -42,7 +42,7 @@
         <!-- Nested Row within Card Body -->
        <center><img src="{{asset('logo.jpg')}}" height="220px" style="padding-top: 20px; "></center>
         <div class="row"> 
-          
+           
           <div class="col-lg-6">
             <div class="p-5">
               <div class="text-center">
@@ -57,7 +57,7 @@
                 <div class="form-group row">
                   <div class="col-sm-6 mb-3 mb-sm-0 @if($errors->get('prenom')) has-error @endif">
 
-                    <input type="text" class="form-control form-control-user" name="prenom" id="exampleFirstName" placeholder="Votre prenom" value="{{old('prenom')}}" >
+                  <input type="text" class="form-control form-control-user" name="prenom" id="exampleFirstName" placeholder="Votre prenom" value="{{Auth!=null?Auth::user()->name:'' }}" >
                      @if($errors->get('prenom'))
                       <div  role="alert">
                        <ul> 
